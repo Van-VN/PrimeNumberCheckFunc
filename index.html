@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Prime number check</h1>
+<button onclick="primeCheck()">Click to start</button>
+</body>
+</html>
+<script>
+    function primeCheck() {
+        let numInput = +prompt("Nhập vào một số bất kì > 1");
+        let counter = 0;
+        if (numInput <= 1) {
+            alert('Nhập số lớn hơn hoặc bằng 2');
+        }
+        for (let i = 2; i <= numInput ; i++) {
+            if (numInput%i === 0) {
+                counter++;
+            }
+        }
+        if (counter === 1) {
+            alert('Số vừa nhập là số nguyên tố');
+        } else {
+            alert('Số vừa nhập không phải là số nguyên tố');
+        }
+    }
+</script>
